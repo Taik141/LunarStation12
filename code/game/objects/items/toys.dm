@@ -34,8 +34,8 @@
  * Balloons
  */
 /obj/item/toy/water_balloon
-	name = "water balloon"
-	desc = "A translucent balloon. There's nothing in it."
+	name = "Balao de agua"
+	desc = "Um balao translucido. Nao tem nada la dentro."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "waterballoon-e"
 	item_state = "balloon-empty"
@@ -47,8 +47,8 @@
 /obj/item/toy/water_balloon/use_after(atom/A, mob/living/user, click_parameters)
 	if (istype(A, /obj/structure/reagent_dispensers/watertank) && get_dist(src,A) <= 1)
 		A.reagents.trans_to_obj(src, 10)
-		to_chat(user, SPAN_NOTICE("You fill the balloon with the contents of [A]."))
-		desc = "A translucent balloon with some form of liquid sloshing around in it."
+		to_chat(user, SPAN_NOTICE("Enche-se o balao com o conteudo de [A]."))
+		desc = "Um balao translucido com algum tipo de liquido a rodopiar la dentro."
 		update_icon()
 		return TRUE
 
@@ -60,12 +60,12 @@
 				return TRUE
 
 			if (O.reagents.has_reagent(/datum/reagent/acid/polyacid, 1))
-				to_chat(user, "The acid chews through the balloon!")
+				to_chat(user, "o acido mastiga o balao!")
 				O.reagents.splash(user, reagents.total_volume)
 				qdel(src)
 			else
-				desc = "A translucent balloon with some form of liquid sloshing around in it."
-				to_chat(user, SPAN_NOTICE("You fill the balloon with the contents of [O]."))
+				desc = "Um balao translucido com algum tipo de liquido a rodopiar la dentro."
+				to_chat(user, SPAN_NOTICE("Enche-se o balao com o conteudo de [O]."))
 				O.reagents.trans_to_obj(src, 10)
 			update_icon()
 			return TRUE
@@ -73,7 +73,7 @@
 
 /obj/item/toy/water_balloon/throw_impact(atom/hit_atom)
 	if(reagents && reagents.total_volume >= 1)
-		src.visible_message(SPAN_WARNING("\The [src] bursts!"),"You hear a pop and a splash.")
+		src.visible_message(SPAN_WARNING("\ [src] rebenta!"), "Ouve-se um estalido e um chapinhar.")
 		src.reagents.touch_turf(get_turf(hit_atom))
 		for(var/atom/A in get_turf(hit_atom))
 			src.reagents.touch(A)
@@ -85,15 +85,15 @@
 
 /obj/item/toy/water_balloon/on_update_icon()
 	if(src.reagents.total_volume >= 1)
-		icon_state = "waterballoon"
+		icon_state = "waterballon"
 		item_state = "balloon"
 	else
 		icon_state = "waterballoon-e"
 		item_state = "balloon-empty"
 
 /obj/item/toy/balloon
-	name = "\improper 'criminal' balloon"
-	desc = "FUK CAPITALISM!11!"
+	name = "\ balao 'criminal' improprio"
+	desc = "Fodase o capitalismo"
 	throwforce = 0
 	throw_speed = 4
 	throw_range = 20
@@ -274,13 +274,13 @@ obj/item/toy/e
 /obj/item/toy/sword/attack_self(mob/user as mob)
 	src.active = !( src.active )
 	if (src.active)
-		to_chat(user, SPAN_NOTICE("You extend the plastic blade with a quick flick of your wrist."))
+		to_chat(user, SPAN_NOTICE("Estende-se a lamina de plastico com um movimento rapido do pulso."))
 		playsound(user, 'sound/weapons/saberon.ogg', 50, 1)
 		src.icon_state = "swordblue"
 		src.item_state = "swordblue"
 		src.w_class = ITEM_SIZE_HUGE
 	else
-		to_chat(user, SPAN_NOTICE("You push the plastic blade back down into the handle."))
+		to_chat(user, SPAN_NOTICE("Empurra-se a lamina de plastico para dentro do cabo."))
 		playsound(user, 'sound/weapons/saberoff.ogg', 50, 1)
 		src.icon_state = "sword0"
 		src.item_state = "sword0"
@@ -316,7 +316,7 @@ obj/item/toy/fakegrenade
  */
 /obj/item/toy/snappop
 	name = "snap pop"
-	desc = "Wow!"
+	desc = "Uau!"
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "snappop"
 	w_class = ITEM_SIZE_TINY
@@ -327,7 +327,7 @@ obj/item/toy/fakegrenade
 	s.set_up(3, 1, src)
 	s.start()
 	new /obj/decal/cleanable/ash(src.loc)
-	src.visible_message(SPAN_WARNING("The [src.name] explodes!"),SPAN_WARNING("You hear a snap!"))
+	src.visible_message(SPAN_WARNING("O [src.name] explodiu!"),SPAN_WARNING("Voce ouve um estralo!"))
 	playsound(src, 'sound/effects/snap.ogg', 50, 1)
 	qdel(src)
 
@@ -335,13 +335,13 @@ obj/item/toy/fakegrenade
 	if((ishuman(H))) //i guess carp and shit shouldn't set them off
 		var/mob/living/carbon/M = H
 		if(!MOVING_DELIBERATELY(M))
-			to_chat(M, SPAN_WARNING("You step on the snap pop!"))
+			to_chat(M, SPAN_WARNING("..."))
 
 			var/datum/effect/spark_spread/s = new /datum/effect/spark_spread
 			s.set_up(2, 0, src)
 			s.start()
 			new /obj/decal/cleanable/ash(src.loc)
-			src.visible_message(SPAN_WARNING("The [src.name] explodes!"),SPAN_WARNING("You hear a snap!"))
+			src.visible_message(SPAN_WARNING("O [src.name] explodiu!"),SPAN_WARNING("Voce ouve um estralo!"))
 			playsound(src, 'sound/effects/snap.ogg', 50, 1)
 			qdel(src)
 
@@ -350,8 +350,8 @@ obj/item/toy/fakegrenade
  */
 
 /obj/item/toy/bosunwhistle
-	name = "bosun's whistle"
-	desc = "A genuine Admiral Krush Bosun's Whistle, for the aspiring ship's captain! Suitable for ages 8 and up, do not swallow."
+	name = "apito do chefe"
+	desc = "Um genuino apito de contramestre Admiral Krush, para o aspirante a capitao de navio! Adequado para maiores de 8 anos, nao engolir."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "bosunwhistle"
 	var/cooldown = 0
@@ -360,7 +360,7 @@ obj/item/toy/fakegrenade
 
 /obj/item/toy/bosunwhistle/attack_self(mob/user as mob)
 	if(cooldown < world.time - 35)
-		to_chat(user, SPAN_NOTICE("You blow on [src], creating an ear-splitting noise!"))
+		to_chat(user, SPAN_NOTICE("Sopra [src], criando um ruido de cortar os ouvidos!"))
 		playsound(user, 'sound/misc/boatswain.ogg', 20, 1)
 		cooldown = world.time
 
@@ -376,7 +376,7 @@ obj/item/toy/fakegrenade
 //all credit to skasi for toy mech fun ideas
 /obj/item/toy/prize/attack_self(mob/user as mob)
 	if(cooldown < world.time - 8)
-		to_chat(user, SPAN_NOTICE("You play with [src]."))
+		to_chat(user, SPAN_NOTICE("Brinca-se com [src]."))
 		playsound(user, 'sound/mecha/mechstep01.ogg', 20, 1)
 		cooldown = world.time
 
