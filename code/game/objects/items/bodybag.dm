@@ -1,8 +1,8 @@
 //Also contains /obj/structure/closet/body_bag because I doubt anyone would think to look for bodybags in /object/structures
 
 /obj/item/bodybag
-	name = "body bag"
-	desc = "A folded bag designed for the storage and transportation of cadavers."
+	name = "Mochila de corpos"
+	desc = "Para guardadar cadavares"
 	icon = 'icons/obj/closets/bodybag.dmi'
 	icon_state = "bodybag_folded"
 	w_class = ITEM_SIZE_SMALL
@@ -13,8 +13,8 @@
 
 
 /obj/item/storage/box/bodybags
-	name = "body bags"
-	desc = "This box contains body bags."
+	name = "Mochila de corpos"
+	desc = "Essa caixa contem cadaveres."
 	icon_state = "bodybags"
 	startswith = list(/obj/item/bodybag = 7)
 
