@@ -109,7 +109,7 @@
 
 /obj/item/toy/balloon/nanotrasen
 	name = "\improper 'motivational' balloon"
-	desc = "Eu gosto muitissimo do Profit. Utilizo apenas produtos de marca. Não fazes a mínima ideia."
+	desc = "Eu gosto muitissimo do Profit. Utilizo apenas produtos de marca. Nao fazes a mínima ideia."
 	icon_state = "ntballoon"
 	item_state = "ntballoon"
 
@@ -160,7 +160,7 @@
 			bullets++
 			to_chat(user, SPAN_NOTICE("Carrega-se o dardo de espuma na besta."))
 		else
-			to_chat(usr, SPAN_WARNING("Já está completamente carregado."))
+			to_chat(usr, SPAN_WARNING("Ja esta completamente carregado."))
 		return TRUE
 
 	return ..()
@@ -189,7 +189,7 @@
 					if(!istype(M,/mob/living)) continue
 					if(M == user) continue
 					for(var/mob/O in viewers(world.view, D))
-						O.show_message(SPAN_WARNING("\O [M] foi atingido pelo dardo de espuma!"), 1)
+						O.show_message(SPAN_WARNING("\ [M] foi atingido pelo dardo de espuma!"), 1)
 					new /obj/item/toy/ammo/crossbow(M.loc)
 					qdel(D)
 					return TRUE
@@ -211,7 +211,7 @@
 	else if (bullets == 0)
 		user.Weaken(5)
 		for(var/mob/O in viewers(world.view, user))
-			O.show_message(SPAN_WARNING("\O [user] apercebeu-se de que nao tinha muniçoes e começou a procurar algumas!"), 1)
+			O.show_message(SPAN_WARNING("\ [user] apercebeu-se de que nao tinha muniçoes e começou a procurar algumas!"), 1)
 		return TRUE
 
 
@@ -220,17 +220,17 @@
 	if (istype(M) && M.lying)
 		if (bullets > 0)
 			M.visible_message(
-				SPAN_DANGER("\O [user] alinha casualmente um tiro na cabeça de \the [M] e puxa o gatilho!"),
+				SPAN_DANGER("\ [user] alinha casualmente um tiro na cabeça de \the [M] e puxa o gatilho!"),
 				SPAN_WARNING("Ouve-se o som da espuma contra o cranio")
 			)
-			M.visible_message(SPAN_WARNING("\O [M] foi atingido na cabeça pelo dardo de espuma!"))
+			M.visible_message(SPAN_WARNING("\ [M] foi atingido na cabeça pelo dardo de espuma!"))
 
 			playsound(user.loc, 'sound/items/syringeproj.ogg', 50, 1)
 			new /obj/item/toy/ammo/crossbow(M.loc)
 			src.bullets--
 			return TRUE
 		if (bullets == 0)
-			M.visible_message(SPAN_DANGER("\O [user] alinha casualmente um tiro na cabeça do [M], puxa o gatilho, depois apercebe-se que nao tem muniçoes e cai no chao a procura de algumas!"))
+			M.visible_message(SPAN_DANGER("\ [user] alinha casualmente um tiro na cabeça do [M], puxa o gatilho, depois apercebe-se que nao tem muniçoes e cai no chao a procura de algumas!"))
 			user.Weaken(5)
 			return TRUE
 
@@ -254,6 +254,8 @@
 	icon_state = "null"
 	anchored = TRUE
 	density = FALSE
+
+obj/item/toy/e
 
 
 /*
