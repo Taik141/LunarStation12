@@ -38,13 +38,13 @@
 /obj/structure/closet/body_bag/use_tool(obj/item/tool, mob/user, list/click_params)
 	// Pen - Set label
 	if (istype(tool, /obj/item/pen))
-		var/input = input(user, "What would you like the label to be?", name, label) as text|null
+		var/input = input(user, "Como gostaria que fosse a etiqueta?", name, label) as text|null
 		input = sanitizeSafe(input, MAX_NAME_LEN)
 		if (!input || input == label || !user.use_sanity_check(src, tool))
 			return TRUE
 		set_label(input)
 		user.visible_message(
-			SPAN_NOTICE("\The [user] labels \the [src] with \a [tool]."),
+			SPAN_NOTICE("\The [user] rotulos \the [src] with \a [tool]."),
 			SPAN_NOTICE("You set \the [src]'s label with \the [tool] to: [SPAN_INFO("'[label]'")]")
 		)
 		return TRUE
@@ -98,14 +98,14 @@
 		return FALSE
 
 	if(opened)
-		to_chat(user, SPAN_NOTICE("You must close \the [name] before it can be folded."))
+		to_chat(user, SPAN_NOTICE("E necessario fechar \the [name] antes de poder ser dobrado."))
 		return FALSE
 
 	if(length(contents))
-		to_chat(user, SPAN_NOTICE("You can't fold \the [name] while it has something inside it."))
+		to_chat(user, SPAN_NOTICE("Voce nao consegue abrir \the [name] enquando tem alguma coisa"))
 		return FALSE
 
-	visible_message("[user] folds up the [name]")
+	visible_message("[user] Abre [name]")
 	. = new item_path(get_turf(src))
 	qdel(src)
 
@@ -115,8 +115,8 @@
 		fold(usr)
 
 /obj/item/robot_rack/body_bag
-	name = "stasis bag rack"
-	desc = "A rack for carrying folded stasis bags and body bags."
+	name = "suporte para sacos de estase"
+	desc = "Um suporte para transportar sacos de estase e sacos de corpo dobrados."
 	icon = 'icons/obj/closets/cryobag.dmi'
 	icon_state = "bodybag_folded"
 	object_type = /obj/item/bodybag
