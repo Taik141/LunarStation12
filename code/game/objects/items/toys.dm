@@ -383,64 +383,64 @@ obj/item/toy/fakegrenade
 /obj/item/toy/prize/attack_hand(mob/user as mob)
 	if(loc == user)
 		if(cooldown < world.time - 8)
-			to_chat(user, SPAN_NOTICE("You play with [src]."))
+			to_chat(user, SPAN_NOTICE("Brinca-se com [src]."))
 			playsound(user, 'sound/mecha/mechmove01.ogg', 20, 1)
 			cooldown = world.time
 			return
 	..()
 
 /obj/item/toy/prize/powerloader
-	name = "toy ripley"
-	desc = "Mini-mech action figure! Collect them all! 1/11."
+	name = "brinquedo ripley"
+	desc = "Figura de açao mini-mecanica! Colecciona-as todas! 1/11."
 
 /obj/item/toy/prize/fireripley
-	name = "toy firefighting ripley"
-	desc = "Mini-mech action figure! Collect them all! 2/11."
+	name = "brinquedo de fogo"
+	desc = "Figura de açao mini-mecanica! Colecciona-as todas! 2/11."
 	icon_state = "fireripleytoy"
 
 /obj/item/toy/prize/deathripley
-	name = "toy deathsquad ripley"
-	desc = "Mini-mech action figure! Collect them all! 3/11."
+	name = "brinquedo deathsquad ripley"
+	desc = "Figura de açao mini-mecanica! Colecciona-as todas! 3/11."
 	icon_state = "deathripleytoy"
 
 /obj/item/toy/prize/gygax
-	name = "toy gygax"
-	desc = "Mini-mech action figure! Collect them all! 4/11."
+	name = "Brinquedo gygax"
+	desc = "Figura de açao mini-mecanica! Colecciona-as todas! 4/11."
 	icon_state = "gygaxtoy"
 
 /obj/item/toy/prize/durand
-	name = "toy durand"
-	desc = "Mini-mech action figure! Collect them all! 5/11."
+	name = "Brinquedo durand"
+	desc = "Figura de ação mini-mecânica! Colecciona-as todas! 5/11."
 	icon_state = "durandprize"
 
 /obj/item/toy/prize/honk
-	name = "toy H.O.N.K."
-	desc = "Mini-mech action figure! Collect them all! 6/11."
+	name = "Brinquedo H.O.N.K."
+	desc = "Figura de açao mini-mecanica! Collect them all! 6/11."
 	icon_state = "honkprize"
 
 /obj/item/toy/prize/marauder
-	name = "toy marauder"
-	desc = "Mini-mech action figure! Collect them all! 7/11."
+	name = "Brinquedo marauder"
+	desc = "Figura de açao mini-mecanica! Collect them all! 7/11."
 	icon_state = "marauderprize"
 
 /obj/item/toy/prize/seraph
-	name = "toy seraph"
-	desc = "Mini-mech action figure! Collect them all! 8/11."
+	name = "Brinquedo seraph"
+	desc = "Figura de açao mini-mecanica! Collect them all! 8/11."
 	icon_state = "seraphprize"
 
 /obj/item/toy/prize/mauler
-	name = "toy mauler"
-	desc = "Mini-mech action figure! Collect them all! 9/11."
+	name = "Brinquedo mauler"
+	desc = "Figura de açao mini-mecanica! Collect them all! 9/11."
 	icon_state = "maulerprize"
 
 /obj/item/toy/prize/odysseus
-	name = "toy odysseus"
-	desc = "Mini-mech action figure! Collect them all! 10/11."
+	name = "Brinquedo odysseus"
+	desc = "Figura de açao mini-mecanica! Collect them all! 10/11."
 	icon_state = "odysseusprize"
 
 /obj/item/toy/prize/phazon
-	name = "toy phazon"
-	desc = "Mini-mech action figure! Collect them all! 11/11."
+	name = "Brinquedo phazon"
+	desc = "Figura de açao mini-mecanica! Collect them all! 11/11."
 	icon_state = "phazonprize"
 
 /*
@@ -449,169 +449,169 @@ obj/item/toy/fakegrenade
 
 /obj/item/toy/figure
 	name = "Completely Glitched action figure"
-	desc = "A \"Space Life\" brand... wait, what the hell is this thing? It seems to be requesting the sweet release of death."
+	desc = "A \"Space Life\" marca... espera, que raio é esta coisa? Parece estar a pedir a doce libertaçao da morte."
 	icon_state = "assistant"
 	icon = 'icons/obj/toy.dmi'
 	w_class = ITEM_SIZE_TINY
 
 /obj/item/toy/figure/cmo
 	name = "Chief Medical Officer action figure"
-	desc = "A \"Space Life\" brand Chief Medical Officer action figure."
+	desc = "A \"Space Life\" figura de açao do Oficial Medico Chefe da marca."
 	icon_state = "cmo"
 
 /obj/item/toy/figure/assistant
 	name = "Assistant action figure"
-	desc = "A \"Space Life\" brand Assistant action figure."
+	desc = "A \"Space Life\" figura de açao da marca Assistant."
 	icon_state = "assistant"
 
 /obj/item/toy/figure/atmos
 	name = "Atmospheric Technician action figure"
-	desc = "A \"Space Life\" brand Atmospheric Technician action figure."
+	desc = "A \"Space Life\" figura de açao da marca Atmospheric Technician."
 	icon_state = "atmos"
 
 /obj/item/toy/figure/bartender
 	name = "Bartender action figure"
-	desc = "A \"Space Life\" brand Bartender action figure."
+	desc = "A \"Space Life\" figura de açao do barman da marca."
 	icon_state = "bartender"
 
 /obj/item/toy/figure/borg
 	name = "Cyborg action figure"
-	desc = "A \"Space Life\" brand Cyborg action figure."
+	desc = "A \"Space Life\" Figura de açao do cyborg da marca"
 	icon_state = "borg"
 
 /obj/item/toy/figure/gardener
 	name = "Gardener action figure"
-	desc = "A \"Space Life\" brand Gardener action figure."
+	desc = "A \"Space Life\" figura de açao da marca Gardener."
 	icon_state = "gardener"
 
 /obj/item/toy/figure/captain
 	name = "Captain action figure"
-	desc = "A \"Space Life\" brand Captain action figure."
+	desc = "A \"Space Life\" figura de açao do Capitao da marca."
 	icon_state = "captain"
 
 /obj/item/toy/figure/cargotech
 	name = "Cargo Technician action figure"
-	desc = "A \"Space Life\" brand Cargo Technician action figure."
+	desc = "A \"Space Life\" figura de açao do Tecnico de Carga da marca."
 	icon_state = "cargotech"
 
 /obj/item/toy/figure/ce
 	name = "Chief Engineer action figure"
-	desc = "A \"Space Life\" brand Chief Engineer action figure."
+	desc = "A \"Space Life\" figura de açao do Chefe Engenheiro da marca."
 	icon_state = "ce"
 
 /obj/item/toy/figure/chaplain
 	name = "Chaplain action figure"
-	desc = "A \"Space Life\" brand Chaplain action figure."
+	desc = "A \"Space Life\" figura de açao do Padre da marca."
 	icon_state = "chaplain"
 
 /obj/item/toy/figure/chef
 	name = "Chef action figure"
-	desc = "A \"Space Life\" brand Chef action figure."
+	desc = "A \"Space Life\" figura de açao do chefe da marca."
 	icon_state = "chef"
 
 /obj/item/toy/figure/chemist
 	name = "Pharmacist action figure"
-	desc = "A \"Space Life\" brand Pharmacist action figure."
+	desc = "A \"Space Life\" figura de açao do quimico da marca."
 	icon_state = "chemist"
 
 /obj/item/toy/figure/clown
 	name = "Clown action figure"
-	desc = "A \"Space Life\" brand Clown action figure."
+	desc = "A \"Space Life\" figura de açao do palhaço da marca."
 	icon_state = "clown"
 
 /obj/item/toy/figure/corgi
 	name = "Corgi action figure"
-	desc = "A \"Space Life\" brand Corgi action figure."
+	desc = "A \"Space Life\" figura de açao do corgi da marca."
 	icon_state = "ian"
 
 /obj/item/toy/figure/detective
 	name = "Detective action figure"
-	desc = "A \"Space Life\" brand Detective action figure."
+	desc = "A \"Space Life\" figura de açao do detetive da marca."
 	icon_state = "detective"
 
 /obj/item/toy/figure/dsquad
 	name = "Space Commando action figure"
-	desc = "A \"Space Life\" brand Space Commando action figure."
+	desc = "A \"Space Life\" figura de açao do dsquad da marca."
 	icon_state = "dsquad"
 
 /obj/item/toy/figure/engineer
 	name = "Engineer action figure"
-	desc = "A \"Space Life\" brand Engineer action figure."
+	desc = "A \"Space Life\" figura de açao do engenheiro da marca."
 	icon_state = "engineer"
 
 /obj/item/toy/figure/geneticist
 	name = "Geneticist action figure"
-	desc = "A \"Space Life\" brand Geneticist action figure, which was recently dicontinued."
+	desc = "A \"Space Life\" figura de açao do geneticist da marca."
 	icon_state = "geneticist"
 
 /obj/item/toy/figure/hop
 	name = "Head of Personel action figure"
-	desc = "A \"Space Life\" brand Head of Personel action figure."
+	desc = "A \"Space Life\" figura de açao do chefe Dos funcionarios da marca."
 	icon_state = "hop"
 
 /obj/item/toy/figure/hos
 	name = "Head of Security action figure"
-	desc = "A \"Space Life\" brand Head of Security action figure."
+	desc = "A \"Space Life\" figura de açao do chefe de segurança da marca."
 	icon_state = "hos"
 
 /obj/item/toy/figure/qm
 	name = "Quartermaster action figure"
-	desc = "A \"Space Life\" brand Quartermaster action figure."
+	desc = "A \"Space Life\" figura de açao do chefe da carga da marca."
 	icon_state = "qm"
 
 /obj/item/toy/figure/janitor
 	name = "Janitor action figure"
-	desc = "A \"Space Life\" brand Janitor action figure."
+	desc = "A \"Space Life\" figura de açao do faxineiro da marca."
 	icon_state = "janitor"
 
 /obj/item/toy/figure/agent
 	name = "Internal Affairs Agent action figure"
-	desc = "A \"Space Life\" brand Internal Affairs Agent action figure."
+	desc = "A \"Space Life\" figura de açao do agente da marca."
 	icon_state = "agent"
 
 /obj/item/toy/figure/librarian
 	name = "Librarian action figure"
-	desc = "A \"Space Life\" brand Librarian action figure."
+	desc = "A \"Space Life\" figura de açao do bibliotecario da marca."
 	icon_state = "librarian"
 
 /obj/item/toy/figure/md
 	name = "Medical Doctor action figure"
-	desc = "A \"Space Life\" brand Medical Doctor action figure."
+	desc = "A \"Space Life\" figura de açao do Chefe doutor da marca."
 	icon_state = "md"
 
 /obj/item/toy/figure/mime
 	name = "Mime action figure"
-	desc = "A \"Space Life\" brand Mime action figure."
+	desc = "A \"Space Life\" figura de açao do mimico da marca."
 	icon_state = "mime"
 
 /obj/item/toy/figure/miner
 	name = "Shaft Miner action figure"
-	desc = "A \"Space Life\" brand Shaft Miner action figure."
+	desc = "A \"Space Life\" figura de açao do mineiro da marca."
 	icon_state = "miner"
 
 /obj/item/toy/figure/ninja
 	name = "Space Ninja action figure"
-	desc = "A \"Space Life\" brand Space Ninja action figure."
+	desc = "A \"Space Life\" figura de açao do ninja da marca."
 	icon_state = "ninja"
 
 /obj/item/toy/figure/wizard
 	name = "Wizard action figure"
-	desc = "A \"Space Life\" brand Wizard action figure."
+	desc = "A \"Space Life\" figura de açao do mago da marca."
 	icon_state = "wizard"
 
 /obj/item/toy/figure/rd
 	name = "Chief Science Officer action figure"
-	desc = "A \"Space Life\" brand Chief Science Officer action figure."
+	desc = "A \"Space Life\" figura de açao do chefe da ciencia da marca."
 	icon_state = "rd"
 
 /obj/item/toy/figure/roboticist
 	name = "Roboticist action figure"
-	desc = "A \"Space Life\" brand Roboticist action figure."
+	desc = "A \"Space Life\" figura de açao do robotic da marca."
 	icon_state = "roboticist"
 
 /obj/item/toy/figure/scientist
 	name = "Scientist action figure"
-	desc = "A \"Space Life\" brand Scientist action figure."
+	desc = "A \"Space Life\" figura de açao do cientista da marca."
 	icon_state = "scientist"
 
 /obj/item/toy/figure/syndie
@@ -621,67 +621,67 @@ obj/item/toy/fakegrenade
 
 /obj/item/toy/figure/secofficer
 	name = "Security Officer action figure"
-	desc = "A \"Space Life\" brand Security Officer action figure."
+	desc = "A \"Space Life\" figura de açao do Segurança da marca."
 	icon_state = "secofficer"
 
 /obj/item/toy/figure/warden
 	name = "Warden action figure"
-	desc = "A \"Space Life\" brand Warden action figure."
+	desc = "A \"Space Life\" figura de açao do carceiro da marca."
 	icon_state = "warden"
 
 /obj/item/toy/figure/psychologist
 	name = "Psychologist action figure"
-	desc = "A \"Space Life\" brand Psychologist action figure."
+	desc = "A \"Space Life\" figura de açao do psicologo da marca."
 	icon_state = "psychologist"
 
 /obj/item/toy/figure/paramedic
 	name = "Paramedic action figure"
-	desc = "A \"Space Life\" brand Paramedic action figure."
+	desc = "A \"Space Life\" figura de açao do paramedico da marca."
 	icon_state = "paramedic"
 
 /obj/item/toy/figure/ert
 	name = "Emergency Response Team Commander action figure"
-	desc = "A \"Space Life\" brand Emergency Response Team Commander action figure."
+	desc = "A \"Space Life\" figura de açao do ERT da marca."
 	icon_state = "ert"
 
 /obj/item/toy/therapy_red
 	name = "red therapy doll"
-	desc = "A toy for therapeutic and recreational purposes. This one is red."
+	desc = "Um brinquedo para fins terapeuticos e recreativos. Este e vermelho."
 	icon_state = "therapyred"
 	item_state = "egg4" // It's the red egg in items_left/righthand
 	w_class = ITEM_SIZE_TINY
 
 /obj/item/toy/therapy_purple
 	name = "purple therapy doll"
-	desc = "A toy for therapeutic and recreational purposes. This one is purple."
+	desc = "Um brinquedo para fins terapeuticos e recreativos. Este e roxo."
 	icon_state = "therapypurple"
 	item_state = "egg1" // It's the magenta egg in items_left/righthand
 	w_class = ITEM_SIZE_TINY
 
 /obj/item/toy/therapy_blue
 	name = "blue therapy doll"
-	desc = "A toy for therapeutic and recreational purposes. This one is blue."
+	desc = "Um brinquedo para fins terapeuticos e recreativos. Este e azul."
 	icon_state = "therapyblue"
 	item_state = "egg2" // It's the blue egg in items_left/righthand
 	w_class = ITEM_SIZE_TINY
 
 /obj/item/toy/therapy_yellow
 	name = "yellow therapy doll"
-	desc = "A toy for therapeutic and recreational purposes. This one is yellow."
+	desc = "Um brinquedo para fins terapeuticos e recreativos. Este e amarelo."
 	icon_state = "therapyyellow"
 	item_state = "egg5" // It's the yellow egg in items_left/righthand
 	w_class = ITEM_SIZE_TINY
 
 /obj/item/toy/therapy_orange
 	name = "orange therapy doll"
-	desc = "A toy for therapeutic and recreational purposes. This one is orange."
+	desc = "Um brinquedo para fins terapeuticos e recreativos. Este e laranja."
 	icon_state = "therapyorange"
 	item_state = "egg4" // It's the red one again, lacking an orange item_state and making a new one is pointless
 	w_class = ITEM_SIZE_TINY
 
 /obj/item/toy/therapy_green
 	name = "green therapy doll"
-	desc = "A toy for therapeutic and recreational purposes. This one is green."
+	desc = "Um brinquedo para fins terapeuticos e recreativos. Este e verde."
 	icon_state = "therapygreen"
 	item_state = "egg3" // It's the green egg in items_left/righthand
 	w_class = ITEM_SIZE_TINY
@@ -693,8 +693,8 @@ obj/item/toy/fakegrenade
 
 /obj/structure/plushie
 	abstract_type = /obj/structure/plushie
-	name = "generic plush"
-	desc = "A very generic plushie. It seems to not want to exist."
+	name = "peluche generico"
+	desc = "Um peluche muito generico. Parece nao querer existir."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "ianplushie"
 	atom_flags = ATOM_FLAG_CLIMBABLE
