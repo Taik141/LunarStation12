@@ -109,7 +109,7 @@
 
 /obj/item/toy/balloon/nanotrasen
 	name = "\improper 'motivational' balloon"
-	desc = "Man, I love Profit soooo much. I use only Brand Name products. You have NO idea."
+	desc = "Eu gosto muitissimo do Profit. Utilizo apenas produtos de marca. Não fazes a mínima ideia."
 	icon_state = "ntballoon"
 	item_state = "ntballoon"
 
@@ -118,7 +118,7 @@
  */
 /obj/item/toy/blink
 	name = "electronic blink toy game"
-	desc = "Blink.  Blink.  Blink. Ages 8 and up."
+	desc = "Pestanejar.  Pestanejar.  Pisca. A partir dos 8 anos."
 	icon = 'icons/obj/beacon.dmi'
 	icon_state = "beacon"
 	item_state = "signaler"
@@ -127,8 +127,8 @@
  * Fake singularity
  */
 /obj/item/toy/spinningtoy
-	name = "gravitational singularity"
-	desc = "\"Singulo\" brand spinning toy."
+	name = "singularidade gravitacional"
+	desc = "\"Singulo\" Brinquedo giratorio da marca."
 	icon = 'icons/obj/machines/power/singularity.dmi'
 	icon_state = "singularity_s1"
 
@@ -137,8 +137,8 @@
  */
 
 /obj/item/toy/crossbow
-	name = "foam dart crossbow"
-	desc = "A weapon favored by many overactive children. Ages 8 and up."
+	name = "besta de dardos de espuma."
+	desc = "Uma arma preferida por muitas crianças hiperactivas. A partir dos 8 anos."
 	icon = 'icons/obj/guns/energy_crossbow.dmi'
 	icon_state = "crossbow"
 	item_state = "crossbow"
@@ -158,9 +158,9 @@
 				return TRUE
 			qdel(I)
 			bullets++
-			to_chat(user, SPAN_NOTICE("You load the foam dart into the crossbow."))
+			to_chat(user, SPAN_NOTICE("Carrega-se o dardo de espuma na besta."))
 		else
-			to_chat(usr, SPAN_WARNING("It's already fully loaded."))
+			to_chat(usr, SPAN_WARNING("Já está completamente carregado."))
 		return TRUE
 
 	return ..()
@@ -189,7 +189,7 @@
 					if(!istype(M,/mob/living)) continue
 					if(M == user) continue
 					for(var/mob/O in viewers(world.view, D))
-						O.show_message(SPAN_WARNING("\The [M] was hit by the foam dart!"), 1)
+						O.show_message(SPAN_WARNING("\O [M] foi atingido pelo dardo de espuma!"), 1)
 					new /obj/item/toy/ammo/crossbow(M.loc)
 					qdel(D)
 					return TRUE
@@ -211,7 +211,7 @@
 	else if (bullets == 0)
 		user.Weaken(5)
 		for(var/mob/O in viewers(world.view, user))
-			O.show_message(SPAN_WARNING("\The [user] realized they were out of ammo and starting scrounging for some!"), 1)
+			O.show_message(SPAN_WARNING("\O [user] apercebeu-se de que nao tinha muniçoes e começou a procurar algumas!"), 1)
 		return TRUE
 
 
@@ -220,17 +220,17 @@
 	if (istype(M) && M.lying)
 		if (bullets > 0)
 			M.visible_message(
-				SPAN_DANGER("\The [user] casually lines up a shot with \the [M]'s head and pulls the trigger!"),
-				SPAN_WARNING("You hear the sound of foam against skull")
+				SPAN_DANGER("\O [user] alinha casualmente um tiro na cabeça de \the [M] e puxa o gatilho!"),
+				SPAN_WARNING("Ouve-se o som da espuma contra o cranio")
 			)
-			M.visible_message(SPAN_WARNING("\The [M] was hit in the head by the foam dart!"))
+			M.visible_message(SPAN_WARNING("\O [M] foi atingido na cabeça pelo dardo de espuma!"))
 
 			playsound(user.loc, 'sound/items/syringeproj.ogg', 50, 1)
 			new /obj/item/toy/ammo/crossbow(M.loc)
 			src.bullets--
 			return TRUE
 		if (bullets == 0)
-			M.visible_message(SPAN_DANGER("\The [user] casually lines up a shot with \the [M]'s head, pulls the trigger, then realizes they are out of ammo and drops to the floor in search of some!"))
+			M.visible_message(SPAN_DANGER("\O [user] alinha casualmente um tiro na cabeça do [M], puxa o gatilho, depois apercebe-se que nao tem muniçoes e cai no chao a procura de algumas!"))
 			user.Weaken(5)
 			return TRUE
 
@@ -240,8 +240,8 @@
 		to_chat(user, SPAN_NOTICE("It is loaded with [bullets] foam darts!"))
 
 /obj/item/toy/ammo/crossbow
-	name = "foam dart"
-	desc = "It's nerf or nothing! Ages 8 and up."
+	name = "Dart"
+	desc = "E nerf ou nada! A partir dos 8 anos."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "foamdart"
 	w_class = ITEM_SIZE_TINY
@@ -260,8 +260,8 @@
  * Toy swords
  */
 /obj/item/toy/sword
-	name = "toy sword"
-	desc = "A cheap, plastic replica of an energy sword. Realistic sounds! Ages 8 and up."
+	name = "Espada De brinquedo"
+	desc = "..."
 	icon = 'icons/obj/weapons/melee_energy.dmi'
 	icon_state = "sword0"
 	item_state = "sword0"
@@ -291,7 +291,7 @@
 
 /obj/item/toy/katana
 	name = "katana"
-	desc = "Woefully underpowered in D20."
+	desc = "Uma katana forte."
 	icon = 'icons/obj/weapons/melee_physical.dmi'
 	icon_state = "katana"
 	item_state = "katana"
@@ -301,6 +301,13 @@
 	throwforce = 5
 	w_class = ITEM_SIZE_LARGE
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced")
+
+obj/item/toy/fakegrenade
+	name = "Granada falsa"
+	desc = "Granada fake"
+	icon = 'icons/obj/fakegrenade.dmi'
+	icon_state = "fake"
+	item_state = "fake"
 
 /*
  * Snap pops
@@ -981,6 +988,8 @@
 	name = "dipping bird toy"
 	desc = "An ancient human bird idol, worshipped by clerks and desk jockeys."
 	icon_state= "dippybird"
+
+
 
 // tg station ports
 
