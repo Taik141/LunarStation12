@@ -1,5 +1,5 @@
 /datum/job/cmo
-	title = "Chief Medical Officer"
+	title = "Chefe medico"
 	head_position = 1
 	department = "Medical"
 	department_flag = MED|COM
@@ -19,7 +19,7 @@
 	outfit_type = /singleton/hierarchy/outfit/job/medical/cmo
 
 /datum/job/doctor
-	title = "Medical Doctor"
+	title = "Doutor"
 	department = "Medical"
 	department_flag = MED
 
@@ -39,7 +39,7 @@
 
 //Chemist is a medical job damnit	//YEAH FUCK YOU SCIENCE	-Pete	//Guys, behave -Erro
 /datum/job/chemist
-	title = "Pharmacist"
+	title = "Quimico."
 	department = "Medical"
 	department_flag = MED
 
@@ -67,7 +67,7 @@
 	outfit_type = /singleton/hierarchy/outfit/job/medical/geneticist
 
 /datum/job/psychiatrist
-	title = "Psychiatrist"
+	title = "Psicologo"
 	department = "Medical"
 	department_flag = MED
 
@@ -81,7 +81,7 @@
 	outfit_type = /singleton/hierarchy/outfit/job/medical/psychiatrist
 
 /datum/job/Paramedic
-	title = "Paramedic"
+	title = "Paramedico"
 	department = "Medical"
 	department_flag = MED
 
